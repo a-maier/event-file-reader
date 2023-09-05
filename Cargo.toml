@@ -1,6 +1,6 @@
 [package]
 name = "event-file-reader"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Andreas Maier <andreas.martin.maier@desy.de>"]
 edition = "2021"
 description = "Generic reader for scattering event files"
