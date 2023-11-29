@@ -12,7 +12,7 @@ impl Reader {
     pub(crate) fn new<P: AsRef<Path>>(input: P) -> Result<Self, Error> {
         ntuple::Reader::new(input)
             .map(Reader)
-            .ok_or_else(|| Error::NTupleConstructError)
+            .ok_or_else(|| Error::ConstructNTuple)
     }
 }
 

@@ -52,17 +52,17 @@ pub enum Error {
     #[error("Failed to determine event file format")]
     UnknownFormat,
     #[error("I/O error")]
-    IOError(#[from] std::io::Error),
+    IO(#[from] std::io::Error),
     #[cfg(feature = "lhef")]
     #[error("LHEF error")]
-    LHEFError(#[from] lhef::reader::ReadError),
+    Lhef(#[from] lhef::reader::ReadError),
     #[cfg(feature = "hepmc2")]
     #[error("HepMC2 error")]
-    HepMC2Error(#[from] hepmc2::reader::LineParseError),
+    HepMC2(#[from] hepmc2::reader::LineParseError),
     #[cfg(feature = "ntuple")]
     #[error("ntuple error")]
-    NTupleError(#[from] ntuple::reader::ReadError),
+    NTuple(#[from] ntuple::reader::ReadError),
     #[cfg(feature = "ntuple")]
     #[error("Failed to read from ROOT file")]
-    NTupleConstructError,
+    ConstructNTuple,
 }
