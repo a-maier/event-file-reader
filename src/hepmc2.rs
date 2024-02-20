@@ -4,9 +4,7 @@ use avery::Event;
 
 use crate::reader::Error;
 
-pub(crate) struct Reader<T> (
-    hepmc2::Reader<T>
-);
+pub(crate) struct Reader<T>(hepmc2::Reader<T>);
 
 impl<T: BufRead> Reader<T> {
     pub(crate) fn new(input: T) -> Result<Self, Error> {

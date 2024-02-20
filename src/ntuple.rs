@@ -4,9 +4,7 @@ use avery::Event;
 
 use crate::reader::Error;
 
-pub(crate) struct Reader (
-    ntuple::Reader
-);
+pub(crate) struct Reader(ntuple::Reader);
 
 impl Reader {
     pub(crate) fn new<P: AsRef<Path>>(input: P) -> Result<Self, Error> {

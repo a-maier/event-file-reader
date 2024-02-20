@@ -1,12 +1,10 @@
-use std::{io::BufReader, fs::File, path::Path};
+use std::{fs::File, io::BufReader, path::Path};
 
 use audec::auto_decompress;
 use avery::Event;
 use thiserror::Error;
 
-pub struct EventFileReader (
-    Box<dyn Iterator<Item = Result<Event, Error>>>
-);
+pub struct EventFileReader(Box<dyn Iterator<Item = Result<Event, Error>>>);
 
 impl EventFileReader {
     pub fn new<P: AsRef<Path>>(infile: P) -> Result<Self, Error> {

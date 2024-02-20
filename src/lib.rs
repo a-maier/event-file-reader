@@ -39,12 +39,12 @@
 //! - `lz4_flex`: Support for [lz4](https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)) compressed event files using the [lz4_flex crate](https://crates.io/crates/lz4_flex). Incompatible with the `lz4` feature.
 //!
 
-mod reader;
-#[cfg(feature = "lhef")]
-mod lhef;
 #[cfg(feature = "hepmc2")]
 mod hepmc2;
+#[cfg(feature = "lhef")]
+mod lhef;
 #[cfg(feature = "ntuple")]
 mod ntuple;
+mod reader;
 
 pub use reader::EventFileReader;
