@@ -12,10 +12,10 @@ repository = "https://github.com/a-maier/event-file-reader"
 
 [dependencies]
 audec = { version = "0.1", default-features = false }
-avery = { version = "0.6", default-features = false }
-hepmc2 = { version = "0.6", optional = true }
+avery = { version = "0.7", default-features = false }
+hepmc2 = { version = "0.7", optional = true }
 lhef = { version = "0.6", optional = true }
-ntuple = { version = "0.8", optional = true }
+ntuple = { version = "0.9", optional = true }
 thiserror = "1.0"
 
 [build-dependencies]
